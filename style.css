@@ -6,6 +6,7 @@
     padding: 0;
     text-decoration: none;
     font-family: Verdana, sans-serif;
+    list-style: none;
 }
 
 /* font */
@@ -18,10 +19,10 @@ h1, h2, h3, h4, .Navigation li a, .Font {
 /* header */
 
 .Header {
-
+    
 }
 
-.Banner {
+/* .Banner {
     background-image: url(banner.jpg);
     background-position: center;
     height: 85px;
@@ -30,45 +31,106 @@ h1, h2, h3, h4, .Navigation li a, .Font {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+} */
+
+.Banner {
+    background-image: url(banner.jpg);
+    background-repeat: repeat-x;
+    max-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .Options {
     align-self: stretch;
     margin-bottom: 60px;
     margin-left: 10px;
-    width: 180px;
+    flex: 1;
 }
 
 .Login {
+    position: relative;
     color: #fff;
+    text-decoration: none;
     font-weight: bold;
     font-size: 15px;
-}
+  }
+  
+    .Login:hover {
+    color: #fff;
+    }
+  
+    .Login::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #a2d2ff;
+    transform: scaleX(0);
+    transition: transform 0.1s ease;
+    }
+  
+    .Login:hover::before {
+    transform: scaleX(1);
+    }
 
 .Logo {
-    
+    flex: 1;
+    text-align: center;
 }
 
 .BannerLogo {
     cursor: pointer;
+    max-width: 200px;
 }
 
 .Alerts {
-
+    flex: 1;
+    text-align: center;
 }
 
 .BannerButton {
+    max-height: 45px;
     font-size: larger;
     font-weight: bolder;
     padding: 5px 15px;
     border-radius: 10px;
-    animation: rainbow-bg 7s linear;
+    border: 2px solid #000;
+    animation: rainbow-bg 12s linear;
 	animation-iteration-count: infinite;
+    transition: all 0.3s ease-in-out;
+}
+
+.BannerAlertMobile {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .BannerAlertMobile {
+        visibility: visible;
+        position: absolute;
+        right: 0;
+        margin: 0 auto;
+    }
+    .BannerAlert {
+        visibility: hidden;
+    }
+  }
+
+@media only screen and (max-width: 379px) {
+  .BannerAlertMobile {
+        visibility: hidden;
+  }
 }
 
 .BannerButton:hover {
-    animation: rainbow-bg 1.5s linear;
+    animation: rainbow-bg 2s linear;
     animation-iteration-count: infinite;
+    transform: scale(1.1);
 }
 
 @keyframes rainbow-bg {
@@ -113,9 +175,10 @@ h1, h2, h3, h4, .Navigation li a, .Font {
 /* navigation */
 
 nav {
-    background-color: rgb(0, 102, 255);
+    background-color: #1995ff;
     height: 40px;
-    border-top: 2px #000;
+    border-top: 2px solid #0073d5;
+    border-bottom: 2px solid #0073d5;
 }
 
 .Navigation {
@@ -123,7 +186,8 @@ nav {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    padding: 8px 0px;
+    padding: 6px 0px;
+    
 }
 
 .Navigation li {
@@ -133,16 +197,78 @@ nav {
 }
 
 .Navigation li a {
-    transition: all 0.3s ease 0s;
+    position: relative;
     color: #fff;
-}
-
-.Navigation li a:hover {
-    transition: all 0.3s ease 0s;
-    color: rgb(185, 207, 255);
-
-}
+    text-decoration: none;
+  }
+  
+  .Navigation li a:hover {
+    color: #fff;
+  }
+  
+  .Navigation li a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #a2d2ff;
+    transform: scaleX(0);
+    transition: transform 0.1s ease;
+  }
+  
+  .Navigation li a:hover::before {
+    transform: scaleX(1);
+  }
 
 .Navigation li:not(:last-child) {
-    border-right: 1px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+/* body */
+
+.Body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+/* member login */
+
+.MemberLogin {
+    background-color: pink;
+}
+
+/* dybrix at a glance */
+
+.DybrixAtAGlance {
+    background-color: purple;
+}
+
+/* cool games */
+
+.CoolGames {
+    background-color: coral;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;    
+}
+
+.CoolGamesList {
+    background-color: crimson;
+    max-width: 1200px;
+    display: grid;
+    gap: 1rem;
+    
+}
+
+.CoolGame {
+    padding: 1rem;
+    height: 4rem;
 }
