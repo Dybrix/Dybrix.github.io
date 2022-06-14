@@ -11,7 +11,7 @@
 /* font */
 
 h1, h2, h3, h4, .Navigation li a, .Font {
-    font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif, !important;
     color: #000;
 }
 
