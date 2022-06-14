@@ -19,7 +19,7 @@ h1, h2, h3, h4, .Navigation li a, .Font {
 /* header */
 
 .Header {
-    
+
 }
 
 /* .Banner {
@@ -115,6 +115,7 @@ h1, h2, h3, h4, .Navigation li a, .Font {
         position: absolute;
         right: 0;
         margin: 0 auto;
+        padding-right: 3px;
     }
     .BannerAlert {
         visibility: hidden;
