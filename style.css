@@ -13,7 +13,7 @@
 
 h1, h2, h3, h4, .Navigation li a, .Font {
     font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive !important;
-    color: #000;
+    color: #222;
 }
 
 /* header */
@@ -21,17 +21,6 @@ h1, h2, h3, h4, .Navigation li a, .Font {
 .Header {
 
 }
-
-/* .Banner {
-    background-image: url(banner.jpg);
-    background-position: center;
-    height: 85px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-} */
 
 .Banner {
     background-image: url(banner.jpg);
@@ -99,7 +88,7 @@ h1, h2, h3, h4, .Navigation li a, .Font {
     font-weight: bolder;
     padding: 5px 15px;
     border-radius: 10px;
-    border: 2px solid #000;
+    border: 2px solid #222;
     animation: rainbow-bg 12s linear;
 	animation-iteration-count: infinite;
     transition: all 0.3s ease-in-out;
@@ -176,15 +165,16 @@ h1, h2, h3, h4, .Navigation li a, .Font {
 /* navigation */
 
 nav {
-    background-color: #1995ff;
+    background-color: #3390ff;
     height: 40px;
-    border-top: 2px solid #0073d5;
-    border-bottom: 2px solid #0073d5;
+    border-top: 2px solid #006def;
+    border-bottom: 2px solid #006def;
 }
 
 @media only screen and (max-width: 600px) {
     nav {
         height: 65px;
+        padding-bottom: 5px;
     }
   }
 
@@ -239,18 +229,88 @@ nav {
 
 .Body {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    padding: 1rem;
-    max-width: 1200px;
+    padding: 10px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
 }
 
 /* member login */
 
 .MemberLogin {
-    background-color: pink;
+    border: solid 2px #006def;
+    margin-inline: 10px;
+    max-width: 200px;
+}
+
+.LoginTitle h4 {
+    margin-inline: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.LoginBox h4 {
+    margin-inline: 10px;
+    padding-top: 5px;
+}
+
+.MemberLogin input.Text {
+    margin-inline: 10px;
+    margin-top: 5px;
+    width: 170px;
+    border: dashed 2px #646464;
+    font-size: 1em;
+}
+
+.MemberLogin input.Text::after {
+    border-color: #222;
+}
+
+.LoginTitle {
+    background-color: #a8bddf;
+    border-bottom: solid 2px #006def;
+}
+
+.LoginBox {
+    background-color: #e2e4e7;
+}
+
+.LoginButton, .RegisterButton {
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 5px;
+    width: 70px;
+    padding: 1px;
+    font-size: small;
+    text-align: center;
+    background-color: #fff;
+    color: #646464;
+    border: solid 2px #646464;
+}
+
+.LoginButton:hover, .RegisterButton:hover {
+    border-color: #222;
+    background-color: #3390ff;
+    color: #fff;
+}
+
+.ResetPassword {
+    color: #777;
+    display: block;
+    margin: 0px auto;
+    width: 170px;
+    padding-bottom: 2px;
+    font-size: small;
+    text-align: center;
+}
+
+.ResetPassword:hover {
+    color: #2479ff;
+    text-decoration: underline;
 }
 
 /* dybrix at a glance */
