@@ -1,4 +1,4 @@
-/* all items */
+/* all items/body */
 
 * {
     box-sizing: border-box;
@@ -7,6 +7,12 @@
     text-decoration: none;
     font-family: Verdana, sans-serif;
     list-style: none;
+}
+
+body {
+    background: transparent url(clouds4.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 /* font */
@@ -22,13 +28,19 @@ h1, h2, h3, h4, .Navigation li a, .Font {
 
 }
 
-.Banner {
+.BannerBackground {
     background-image: url(banner.jpg);
     background-repeat: repeat-x;
+}
+
+.Banner {
     max-height: 85px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0px auto;
 }
 
 .Options {
@@ -58,7 +70,7 @@ h1, h2, h3, h4, .Navigation li a, .Font {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #a2d2ff;
+    background-color: #fff;
     transform: scaleX(0);
     transition: transform 0.1s ease;
     }
@@ -165,10 +177,10 @@ h1, h2, h3, h4, .Navigation li a, .Font {
 /* navigation */
 
 nav {
-    background-color: #3390ff;
+    background-color: #68a0ee;
     height: 40px;
-    border-top: 2px solid #006def;
-    border-bottom: 2px solid #006def;
+    border-top: 2px solid #3373cc;
+    border-bottom: 2px solid #3373cc;
 }
 
 @media only screen and (max-width: 600px) {
@@ -212,7 +224,7 @@ nav {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #a2d2ff;
+    background-color: #fff;
     transform: scaleX(0);
     transition: transform 0.1s ease;
   }
@@ -233,7 +245,8 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
     max-width: 1000px;
     margin: 0px auto;
@@ -242,8 +255,8 @@ nav {
 /* member login */
 
 .MemberLogin {
-    border: solid 2px #006def;
-    margin-inline: 10px;
+    border: solid 2px #3373cc;
+    margin-inline-end: 10px;
     max-width: 200px;
 }
 
@@ -271,8 +284,8 @@ nav {
 }
 
 .LoginTitle {
-    background-color: #a8bddf;
-    border-bottom: solid 2px #006def;
+    background-color: #aac5eb;
+    border-bottom: solid 2px #3373cc;
 }
 
 .LoginBox {
@@ -294,7 +307,7 @@ nav {
 
 .LoginButton:hover, .RegisterButton:hover {
     border-color: #222;
-    background-color: #3390ff;
+    background-color: #68a0ee;
     color: #fff;
 }
 
@@ -309,14 +322,81 @@ nav {
 }
 
 .ResetPassword:hover {
-    color: #2479ff;
+    color: #68a0ee;
     text-decoration: underline;
+}
+
+.HomeColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px)  {
+    .HomeColumn {
+        flex-direction: row;
+    }
+  }
+
+.HomePageImage1 {
+    background-image: url(placeholder.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 155px;
+    height: 155px;
+    margin: 10px;
 }
 
 /* dybrix at a glance */
 
 .DybrixAtAGlance {
-    background-color: purple;
+    width: 796px;
+    background-color: #e2e4e7;
+    border: solid 2px #3373cc;
+}
+
+@media only screen and (max-width: 1000px) {
+    .DybrixAtAGlance {
+        max-width: 380px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .DybrixAtAGlance {
+        margin-top: 10px;
+    }
+}
+
+.DybrixAtAGlance h1 {
+    padding: 10px;
+}
+
+.DybrixAtAGlance :is(h2,h3,h4,p) {
+    padding-left: 10px;
+}
+
+.ThingsToDo {
+    max-width: 414px;
+    padding: 20px;
+}
+
+.ThingsToDo li {
+    background-image: url(placeholder.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+}
+
+.Thing1 h3,p {
+    margin-left: 50px;
+}
+
+.Thing2 h3,p {
+    margin-left: 50px;
+}
+
+.Thing3 h3,p {
+    margin-left: 50px;
 }
 
 /* cool games */
