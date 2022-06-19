@@ -10,7 +10,8 @@
 }
 
 body {
-    background: transparent url(clouds4.jpg);
+    /* background: transparent url(clouds4.jpg); */
+    background: linear-gradient(0deg, rgba(255,255,255,1) 10%, rgba(155,197,255,1) 55%, rgba(58,120,255,1) 100%);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -101,7 +102,7 @@ h1, h2, h3, h4, .Navigation li a, .Font {
     padding: 5px 15px;
     border-radius: 10px;
     border: 2px solid #222;
-    animation: rainbow-bg 12s linear;
+    animation: rainbow-bg 10s linear;
 	animation-iteration-count: infinite;
     transition: all 0.3s ease-in-out;
 }
@@ -130,7 +131,7 @@ h1, h2, h3, h4, .Navigation li a, .Font {
 }
 
 .BannerButton:hover {
-    animation: rainbow-bg 2s linear;
+    animation: rainbow-bg 1.5s linear;
     animation-iteration-count: infinite;
     transform: scale(1.1);
 }
@@ -183,7 +184,7 @@ nav {
     border-bottom: 2px solid #3373cc;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 591px) {
     nav {
         height: 65px;
         padding-bottom: 5px;
@@ -239,24 +240,39 @@ nav {
 
 /* body */
 
-.Body {
+.Body{
+    overflow: hidden;
+}
+
+.Page {
+    position: relative;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
     max-width: 1000px;
     margin: 0px auto;
 }
 
+.Lottie {
+    position: absolute;
+    opacity: 0.7;
+}
+
 /* member login */
+
+.HomeColumn {
+    margin: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .MemberLogin {
     border: solid 2px #3373cc;
-    margin-inline-end: 10px;
     max-width: 200px;
 }
 
@@ -326,45 +342,37 @@ nav {
     text-decoration: underline;
 }
 
-.HomeColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media only screen and (max-width: 600px)  {
+@media only screen and (max-width: 586px)  {
     .HomeColumn {
         flex-direction: row;
+        width: 796px;
+        justify-content: space-evenly;
     }
-  }
+}
 
 .HomePageImage1 {
     background-image: url(placeholder.png);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 155px;
-    height: 155px;
+    width: 145px;
+    height: 145px;
     margin: 10px;
+}
+
+@media only screen and (max-width: 982px) and (min-width: 586px)  {
+    .HomePageImage1 {
+        margin-top: 50%;
+  }
 }
 
 /* dybrix at a glance */
 
 .DybrixAtAGlance {
+    flex: 1;
+    margin: 10px 10px 0 10px;
     width: 796px;
     background-color: #e2e4e7;
     border: solid 2px #3373cc;
-}
-
-@media only screen and (max-width: 1000px) {
-    .DybrixAtAGlance {
-        max-width: 380px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .DybrixAtAGlance {
-        margin-top: 10px;
-    }
 }
 
 .DybrixAtAGlance h1 {
@@ -373,6 +381,36 @@ nav {
 
 .DybrixAtAGlance :is(h2,h3,h4,p) {
     padding-left: 10px;
+}
+
+.GlanceHeader1 {
+    font-size: 1.6em;
+}
+
+@media only screen and (max-width: 982px)  {
+    .GlanceHeader1 {
+        text-align: center;
+    }
+    .GlanceHeader2 {
+        text-align: center;
+    }
+}
+
+.GlanceContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 982px)  {
+    .GlanceContainer {
+        flex-direction: column-reverse;
+        padding-top: 20px;
+    }
+}
+
+.HomeVideo {
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .ThingsToDo {
@@ -387,36 +425,100 @@ nav {
     padding-bottom: 20px;
 }
 
-.Thing1 h3,p {
+.Thing1 :is(h3, p) {
     margin-left: 50px;
 }
 
-.Thing2 h3,p {
+.Thing2 :is(h3, p) {
     margin-left: 50px;
 }
 
-.Thing3 h3,p {
+.Thing3 :is(h3, p) {
     margin-left: 50px;
 }
 
 /* cool games */
 
 .CoolGames {
-    background-color: coral;
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;    
+    align-items: center;
+    margin: 10px 10px 0 10px;
+    background-color: #e2e4e7;
+    border: solid 2px #3373cc; 
+}
+
+@media only screen and (max-width: 982px)  {
+    .CoolGames {
+        flex-direction: column;
+    }
+}
+
+.CoolGamesHeader {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 175px;
+}
+
+@media only screen and (max-width: 982px)  {
+    .CoolGamesHeader {
+        text-align: center;
+        width: 350px;
+    }
+}
+
+.CoolGamesHeader p {
+    padding-top: 5px;
 }
 
 .CoolGamesList {
-    background-color: crimson;
-    max-width: 1200px;
-    display: grid;
-    gap: 1rem;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
 }
 
 .CoolGame {
-    padding: 1rem;
-    height: 4rem;
+    flex: 1;
+}
+
+.CoolGame img {
+    width: 130px;
+}
+
+/* news */
+
+.HomeNews {
+    margin: 10px 10px 0 0;
+    padding: 10px;
+    width: 221px;
+    background-color: #e2e4e7;
+    border: solid 2px #3373cc;
+}
+
+.HomeNews h3 {
+    text-align: center;
+}
+
+.HomeNews ul {
+    padding-top: 10px;
+    height: 139px;
+}
+
+.HomeNews ul li {
+    list-style: inside;
+}
+
+/* footer */
+
+.Footer {
+    padding: 10px 0;
+    bottom: 0;
+    text-align: center;
+    text-decoration: none;
+    color: #777;
+}
+
+.Footer a {
+    color: #222;
 }
