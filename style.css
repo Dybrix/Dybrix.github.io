@@ -206,6 +206,12 @@ nav {
     font-size: large;
 }
 
+@media only screen and (max-width: 591px) {
+        .Navigation li {
+        font-size: 1.1em;
+    }
+  }
+
 .Navigation li a {
     position: relative;
     color: #fff;
@@ -535,8 +541,8 @@ nav {
     background-image: url(placeholder.png);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 145px;
-    height: 145px;
+    width: 120px;
+    height: 120px;
 }
 
 @media only screen and (min-width: 835px)  {
