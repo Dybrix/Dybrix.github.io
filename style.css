@@ -179,18 +179,10 @@ h1, h2, h3, h4, .Navigation li a, .Font {
 
 nav {
     background-color: #68a0ee;
-    height: 40px;
+    min-height: 40px;
     border-top: 2px solid #3373cc;
     border-bottom: 2px solid #3373cc;
 }
-
-@media only screen and (max-width: 591px) {
-    nav {
-        height: 65px;
-        padding-bottom: 5px;
-    }
-  }
-
 
 .Navigation {
     list-style: none;
@@ -524,7 +516,12 @@ nav {
 
 .HomeNews ul {
     padding-top: 10px;
-    height: 139px;
+}
+
+@media only screen and (min-width: 982px) {
+    .HomeNews ul {
+        height: 139px;
+  }
 }
 
 @media only screen and (max-width: 982px) and (min-width: 835px) {
