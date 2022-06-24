@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DYBRIX</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="Header">
-        <div class="BannerBackground">
-            <div class="Banner">
-            <div class="Options">
-                <a class="Login" href="login">Login</a>
-                <div class="Settings"></div>
-            </div>
-             <div class="Logo">
-                <a href="">
-                    <img class="BannerLogo" src="dybrix_logo.png" alt="DYBRIX">
-                </a>
-            </div>
-            <div class="Alerts">
-                <a class="BannerAlert" href="register.html"><button class="Font BannerButton">Sign Up and Play</button></a>
-                <a class="BannerAlertMobile" href="register.html"><button class="Font BannerButton">Sign Up</button></a>
-            </div>
-            </div>
-        </div>
-        <nav>
-            <ul class="Navigation">
-                <li><a href="user.html">My DYBRIX</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="people.html">People</a></li>
-                <li><a href="forum.html">Forum</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="help.html">Help</a></li>
-            </ul>
-        </nav>
-    </div>
+<?php include 'header.php';?>
     <div class="Body">
         <div class="Lottie">
             <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -136,12 +97,6 @@
             </div>
         </div>
     </div>
-    <div class="Footer">
-        <hr>
-        <br>
-        <p class="FooterText">© 2022 DYBRIX. All rights reserved.</p>
-        <a href="index.html">Home</a> | <a href="terms.html">Terms of Service</a> | <a href="privacy.html">Privacy Policy</a>
-        </ul>
-    </div>
+    <?php include 'footer.php';?>
 </body>
 </html>

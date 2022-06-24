@@ -25,10 +25,6 @@ h1, h2, h3, h4, .Navigation li a, .Font {
 
 /* header */
 
-.Header {
-
-}
-
 .BannerBackground {
     background-image: url(banner.jpg);
     background-repeat: repeat-x;
@@ -107,26 +103,22 @@ h1, h2, h3, h4, .Navigation li a, .Font {
     transition: all 0.3s ease-in-out;
 }
 
-.BannerAlertMobile {
-    visibility: hidden;
+.ButtonDesktop {
+    display: inline-block;
+    white-space: nowrap;
 }
 
-@media only screen and (max-width: 600px) {
-    .BannerAlertMobile {
-        visibility: visible;
-        position: absolute;
-        right: 0;
-        margin: 0 auto;
-        padding-right: 3px;
-    }
-    .BannerAlert {
-        visibility: hidden;
-    }
-  }
+.ButtonMobile {
+    display: none;
+}
 
-@media only screen and (max-width: 379px) {
-  .BannerAlertMobile {
-        visibility: hidden;
+@media only screen and (max-width: 664px) {
+    .ButtonDesktop {
+        display: none;
+    }
+    .ButtonMobile {
+        display: inline-block;
+        white-space: nowrap;
   }
 }
 
